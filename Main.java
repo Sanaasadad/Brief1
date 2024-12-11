@@ -12,6 +12,9 @@ public class Main {
     static void Multiplication () {
         System.out.println(n1 + " x " + n2 + " is: " + (n1 * n2));
     }
+    static void Division () {
+        System.out.println( n1 + " / " + n2 + " is : " + (n1 / n2));
+    }
         public static void main( String [] args) {
         int choice ;
         do {
@@ -35,12 +38,15 @@ public class Main {
                     Multiplication();
                     break;
                 case 4:
+                    Division();
+                    break;
+                case 5:
                     System.out.println(" try again ");
                     break;
                 default:
                     System.out.println("the choice is invalid");
             }
-        } while (choice!=4);
+        } while (choice!=5);
 
 
     }
