@@ -3,6 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     static int n1,n2;
+    static long Result,i;
     static void Addition (){
         System.out.println(n1 + " + " + n2 + " is: " + (n1 + n2));
     }
@@ -28,7 +29,18 @@ public class Main {
         System.out.println(" Square root " + n2 + " is: " + Math.sqrt(n2));
 
     }
-
+    static void Factorial () {
+        Result = 1;
+        for (i = 1; i <= n1; i++) {
+            Result *= i;
+        }
+        System.out.println("Factorial" + n1 + " is: " + Result);
+        Result = 1;
+        for (i = 1; i <= n2; i++) {
+            Result *= i;
+        }
+        System.out.println("Factorial" + n2 + " is: " + Result);
+    }
         public static void main( String [] args) {
         int choice ;
         do {
@@ -61,6 +73,9 @@ public class Main {
                     Square();
                     break;
                 case 7:
+                    Factorial();
+                    break;
+                case 8:
                     System.out.println(" try again ");
                     break;
                 default:
