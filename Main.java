@@ -23,6 +23,11 @@ public class Main {
     static void power (){
         System.out.println( n1 + " power " + n2 + " is: " + Math.pow(n1,n2));
     }
+    static void Square (){
+        System.out.println(" Square root " + n1 + " is: " + Math.sqrt(n1));
+        System.out.println(" Square root " + n2 + " is: " + Math.sqrt(n2));
+
+    }
 
         public static void main( String [] args) {
         int choice ;
@@ -53,12 +58,15 @@ public class Main {
                     power();
                     break;
                 case 6:
+                    Square();
+                    break;
+                case 7:
                     System.out.println(" try again ");
                     break;
                 default:
                     System.out.println("the choice is invalid");
             }
-        } while (choice!=5);
+        } while (choice!=7);
 
 
     }
