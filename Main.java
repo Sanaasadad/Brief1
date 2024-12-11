@@ -2,12 +2,15 @@
 import java.util.Scanner;
 
 public class Main {
-    static int n1,n2,i;
+    static int n1,n2;
     static void Addition (){
         System.out.println(n1 + " + " + n2 + " is: " + (n1 + n2));
     }
     static void Subtract () {
         System.out.println(n1 + " - " + n2 + " is: " + (n1 - n2));
+    }
+    static void Multiplication () {
+        System.out.println(n1 + " x " + n2 + " is: " + (n1 * n2));
     }
         public static void main( String [] args) {
         int choice ;
@@ -29,12 +32,15 @@ public class Main {
                     Subtract();
                     break;
                 case 3:
+                    Multiplication();
+                    break;
+                case 4:
                     System.out.println(" try again ");
                     break;
                 default:
                     System.out.println("the choice is invalid");
             }
-        } while (choice!=0);
+        } while (choice!=4);
 
 
     }
