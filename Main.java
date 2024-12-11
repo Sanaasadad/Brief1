@@ -13,8 +13,14 @@ public class Main {
         System.out.println(n1 + " x " + n2 + " is: " + (n1 * n2));
     }
     static void Division () {
-        System.out.println( n1 + " / " + n2 + " is : " + (n1 / n2));
+        if (n1 == 0 || n2 == 0){
+            System.out.println(" you can't divide on 0 ");
+        }
+        else {
+            System.out.println(n1 + " / " + n2 + " is: " + (n1 / n2));
+        }
     }
+
         public static void main( String [] args) {
         int choice ;
         do {
