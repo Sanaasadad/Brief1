@@ -20,6 +20,9 @@ public class Main {
             System.out.println(n1 + " / " + n2 + " is: " + (n1 / n2));
         }
     }
+    static void power (){
+        System.out.println( n1 + " power " + n2 + " is: " + Math.pow(n1,n2));
+    }
 
         public static void main( String [] args) {
         int choice ;
@@ -47,6 +50,9 @@ public class Main {
                     Division();
                     break;
                 case 5:
+                    power();
+                    break;
+                case 6:
                     System.out.println(" try again ");
                     break;
                 default:
