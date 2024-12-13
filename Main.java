@@ -2,63 +2,78 @@
 import java.util.Scanner;
 
 public class Main {
-    static int n1,n2;
-    static long Result,i;
-    static void Addition (){
-        System.out.println(n1 + " + " + n2 + " is: " + (n1 + n2));
+    static double a, b, Result;
+
+    static void Addition() {
+        System.out.println(a + " + " + b + " est:"  + (a + b));
     }
-    static void Subtract () {
-        System.out.println(n1 + " - " + n2 + " is: " + (n1 - n2));
+
+    static void Soustraction() {
+        System.out.println(a + " - " + b + " est:" + (a - b));
     }
-    static void Multiplication () {
-        System.out.println(n1 + " x " + n2 + " is: " + (n1 * n2));
+
+    static void Multiplication() {
+        System.out.println(a + " x " + b + " est:" + (a * b));
     }
-    static void Division () {
-        if (n1 == 0 || n2 == 0){
-            System.out.println(" you can't divide on 0 ");
+
+    static void Division() {
+        if (a == 0 || b == 0) {
+            System.out.println(" vous ne pouvez pas divise sur 0 !!");
+        } else {
+            System.out.println(a + " / " + b + " est:" + (a / b));
         }
-        else {
-            System.out.println(n1 + " / " + n2 + " is: " + (n1 / n2));
-        }
     }
-    static void power (){
-        System.out.println( n1 + " power " + n2 + " is: " + Math.pow(n1,n2));
+    static void Puissance(){
+        System.out.println(a + " puissance " + b + "est:"+Math.pow(a , b));
     }
-    static void Square (){
-        System.out.println(" Square root " + n1 + " is: " + Math.sqrt(n1));
-        System.out.println(" Square root " + n2 + " is: " + Math.sqrt(n2));
+    static void Racine_carree(){
+        System.out.println("racine carree de a est:" +Math.sqrt(a));
+        System.out.println("racine carree de b est:" +Math.sqrt(b));
 
     }
-    static void Factorial () {
+    static void Factorielle() {
         Result = 1;
-        for (i = 1; i <= n1; i++) {
+        for (int i = 1; i <= a; i++) {
             Result *= i;
         }
-        System.out.println("Factorial" + n1 + " is: " + Result);
-        Result = 1;
-        for (i = 1; i <= n2; i++) {
-            Result *= i;
+        System.out.println(" Factorielle " + a + "est: " + Result);
+        for (int i = 1; i <= b; i++){
+            Result *=i ;
         }
-        System.out.println("Factorial" + n2 + " is: " + Result);
+        System.out.println(" Factorielle " + b + "est: " + Result);
     }
-        public static void main( String [] args) {
-        int choice ;
+    public static void main(String[] args) {
+        int choix;
+        Scanner valeur = new Scanner(System.in);
+
+        System.out.println(" Entre le 1ere nombre: ");
+        a = valeur.nextDouble();
+        System.out.println(" Entre le 2eme nombre: ");
+        b = valeur.nextDouble();
+
         do {
-            System.out.println("1-Addition\n 2-Subtract\n 3-Multiplication\n 4-Division\n 5-power\n 6-Square\n 7-Factorial\n  ");
-            System.out.println("choose an option: ");
-            Scanner SS = new Scanner(System.in);
-            choice = SS.nextInt();
-            System.out.println("Entre first number: ");
-            n1 = SS.nextInt();
-            System.out.println("Entre second number: ");
-            n2 = SS.nextInt();
+            System.out.println("Menu: ");
+            System.out.println(" 1-addition");
+            System.out.println(" 2-Soustraction");
+            System.out.println(" 3-Multiplication");
+            System.out.println(" 4-Division");
+            System.out.println(" 5-puissance");
+            System.out.println(" 6-Racine carree");
+            System.out.println(" 7-Factoriel");
+            System.out.println(" 8-quitter");
+            choix = valeur.nextInt();
+if (choix < 1 && choix > 8 ) {
+    System.out.println("choisissez une option");
 
-            switch(choice) {
+} else{
+    System.out.println(" le choix est invalide");
+}
+            switch (choix) {
                 case 1:
                     Addition();
                     break;
                 case 2:
-                    Subtract();
+                    Soustraction();
                     break;
                 case 3:
                     Multiplication();
@@ -67,25 +82,23 @@ public class Main {
                     Division();
                     break;
                 case 5:
-                    power();
+                    Puissance();
                     break;
                 case 6:
-                    Square();
+                    Racine_carree();
                     break;
                 case 7:
-                    Factorial();
+                    Factorielle();
                     break;
                 case 8:
-                    System.out.println(" try again ");
-                    break;
-                default:
-                    System.out.println("the choice is invalid");
+                    System.out.println("au revoir!!");
+
             }
-        } while (choice!=7);
+
+        } while (choix != 8);
 
 
     }
 
-
-
 }
+
