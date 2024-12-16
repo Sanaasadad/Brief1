@@ -27,20 +27,23 @@ public class Main {
         System.out.println(a + " puissance " + b + "est:"+Math.pow(a , b));
     }
     static void Racine_carree(){
-        System.out.println("racine carree de a est:" +Math.sqrt(a));
-        System.out.println("racine carree de b est:" +Math.sqrt(b));
+        if(a <= 0){
+            System.out.println(" invalide!! ");
+        }else {
+            System.out.println("racine carree de a est:" + Math.sqrt(a));
 
+        }
     }
     static void Factorielle() {
-        Result = 1;
-        for (int i = 1; i <= a; i++) {
-            Result *= i;
+        if(a <= 0){
+            System.out.println(" invalide!! ");
+        }else {
+            Result = 1;
+            for (int i = 1; i <= a; i++) {
+                Result *= i;
+            }
+            System.out.println(" Factorielle " + a + "est: " + Result);
         }
-        System.out.println(" Factorielle " + a + "est: " + Result);
-        for (int i = 1; i <= b; i++){
-            Result *=i ;
-        }
-        System.out.println(" Factorielle " + b + "est: " + Result);
     }
     public static void main(String[] args) {
         int choix;
@@ -63,10 +66,11 @@ public class Main {
             System.out.println(" 8-quitter");
             choix = valeur.nextInt();
 if (choix < 1 && choix > 8 ) {
+
+    System.out.println(" le choix est invalide");
+} else{
     System.out.println("choisissez une option");
 
-} else{
-    System.out.println(" le choix est invalide");
 }
             switch (choix) {
                 case 1:
